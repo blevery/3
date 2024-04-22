@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - chat gpt</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台幣轉日幣轉換器</title>
+</head>
+
+<body>
+    <h1>台幣轉日幣轉換器</h1>
+
+    <form id="currencyForm">
+        <label for="twdAmount">請輸入台幣金額（TWD）：</label>
+        <input type="number" id="twdAmount" name="twdAmount" required>
+        <input type="button" value="轉換" onclick="convertCurrency()">
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function convertCurrency() {
+            const twdAmount = document.getElementById('twdAmount').value;
+            const twdToJpyRate = 3.0;  // 這裡假設的匯率是1 TWD = 3 JPY，請根據實際匯率修改
+            const jpyAmount = twdAmount * twdToJpyRate;
+
+            document.getElementById('result').innerText = `日幣金額（JPY）：${jpyAmount.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
